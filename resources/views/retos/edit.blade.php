@@ -5,7 +5,7 @@
 
         <h1 align="center" style="font-weight: bold; color: darkgoldenrod " class="p-4">** RETOS **</h1>
 
-        {!! Form::model($reto, ['route' => ['retos.update', $reto->id], 'method' => 'put']) !!}
+        {!! Form::model($reto, ['route' => ['retos.update', $reto->slug], 'method' => 'put']) !!}
 
         <div class="form-group mb3">
             {!! Form::label('nombre', 'Nombre del reto:') !!}

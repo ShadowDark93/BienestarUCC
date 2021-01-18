@@ -26,7 +26,8 @@ class Reto extends Model
         return 'slug';
     }
 
-    public function retosCumplidos(){
+    public function retosCumplidos()
+    {
         return $this->hasMany('App\Models\RetosCumplidos');
     }
 }

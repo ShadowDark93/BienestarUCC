@@ -56,7 +56,15 @@ class RetoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'link' => 'required',
+        ]);
+
+        $reto = Reto::create($request->all());
+
+        return redirect()->route('retos.edit', compact('reto'));
     }
 
     /**
@@ -67,7 +75,7 @@ class RetoController extends Controller
      */
     public function show(Request $request, Reto $reto)
     {
-        return view('retos.index', compact('post'));
+        //
     }
 
     /**
@@ -93,7 +101,6 @@ class RetoController extends Controller
         $request->validate([
             'nombre' => "required|unique:retos,nombre,$reto->id",
             'descripcion' => 'required',
-            'slug' => "required|unique:retos,slug,$reto->id",
             'link' => 'required',
         ]);
 
@@ -110,6 +117,8 @@ class RetoController extends Controller
      */
     public function destroy(Reto $reto)
     {
-        //
+        $reto->delete();
+        
+        return redirect()->route('retos.index')->with('deleted', 'ok');
     }
 }

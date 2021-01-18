@@ -5,11 +5,11 @@
 
         <h1 align="center" style="font-weight: bold; color: darkgoldenrod " class="p-4">** RETOS **</h1>
 
-        {!! Form::open() !!}
+        {!! Form::open(['route' => 'retos.store']) !!}
 
         <div class="form-group mb3">
             {!! Form::label('nombre', 'Nombre del reto:') !!}
-            {!! Form::text('nombre', null, ['class' => 'form-control input-to-slug']) !!}
+            {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
 
             @error('nombre')
                 <span class="text-danger">{{ $message }}</span>
@@ -17,7 +17,8 @@
         </div>
 
         <div class="form-group mb3">
-            {!! Form::hidden('slug', null) !!}
+            {!! Form::label('slug', 'Slug:') !!}
+            {!! Form::text('slug', null,  ['class' => 'form-control', 'readonly']) !!}
 
         </div>
 
@@ -39,7 +40,7 @@
 
         <div class="form-group mb3">
             <a href="{{ route('retos.index') }}" class="btn btn-info">Volver</a>
-            {!! Form::submit('Actualizar Reto', ['class' => 'btn btn-success']) !!}
+            {!! Form::submit('Crear Reto', ['class' => 'btn btn-success']) !!}
         </div>
 
         {!! Form::close() !!}
@@ -49,19 +50,6 @@
 @endsection
 
 @section('js')
-
-    @if (session('edited') == 'ok')
-        <script>
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'El Reto se ha sido editado',
-                showConfirmButton: false,
-                timer: 1500
-            })
-
-        </script>
-    @endif
 
     <script src="{{ asset('js/jquery.stringToSlug.min.js') }}"></script>
 
