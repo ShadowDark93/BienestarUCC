@@ -22,9 +22,9 @@ class RetosCumplidosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Reto $reto)
     {
-        //
+        return view('retocumplido.create', compact('reto'));
     }
 
     /**

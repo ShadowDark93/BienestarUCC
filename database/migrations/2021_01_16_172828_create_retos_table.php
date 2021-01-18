@@ -19,7 +19,7 @@ class CreateRetosTable extends Migration
             $table->string('nombre');
             $table->string('slug');
             $table->text('descripcion');
-            $table->string('link');
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }

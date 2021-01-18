@@ -34,7 +34,7 @@ class RetoController extends Controller
             return view('retos.index', compact('retos'));
         } else {
             //para el estudiante retorna los retos propios
-            return view('retos.index_est', compact('retos'));
+            return view('retocumplido.index_est', compact('retos'));
         }
     }
 
@@ -59,7 +59,6 @@ class RetoController extends Controller
         $request->validate([
             'nombre' => 'required',
             'descripcion' => 'required',
-            'link' => 'required',
         ]);
 
         $reto = Reto::create($request->all());
@@ -101,7 +100,6 @@ class RetoController extends Controller
         $request->validate([
             'nombre' => "required|unique:retos,nombre,$reto->id",
             'descripcion' => 'required',
-            'link' => 'required',
         ]);
 
         $reto->update($request->all());
@@ -118,7 +116,7 @@ class RetoController extends Controller
     public function destroy(Reto $reto)
     {
         $reto->delete();
-        
+
         return redirect()->route('retos.index')->with('deleted', 'ok');
     }
 }

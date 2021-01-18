@@ -3,16 +3,14 @@
 @section('content')
     <div class="container p-4">
 
-        <h1 align="center" style="font-weight: bold; color: darkgoldenrod " class="p-4">** RETOS **</h1>
+        <h1 align="center" style="font-weight: bold; color: darkgoldenrod " class="p-4">** CUMPLE TU RETO **</h1>
 
         <table class="table table-striped table-hover table-bordered border-primary">
             <thead class="table-dark">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">NOMBRE DEL RETO</th>
-                    <th scope="col">DESCRIPCION</th>
-                    <th scope="col">LINKS</th>
-                    <th scope="col">ACCIONES</th>
+                    <th scope="col">CUMPLIR RETO</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,10 +19,8 @@
                 <tr>
                     <th scope="row">{{ $r->id }}</th>
                     <td>{{ $r->nombre }}</td>
-                    <td>{{ $r->descripcion }}</td>
-                    <td>{{ $r->link }}</td>
                     <td class="from-group">
-                        <a href="/retos/{{ $r->id }}/edit/" class="btn btn-primary form-control">Cumplir</a>
+                        <a href="{{ route('retocumplido.create', $r) }}" class="btn btn-primary">Cumplir</a>
                     </td>
                 </tr>
                 @endforeach

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RetoController;
+use App\Http\Controllers\RetosCumplidosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +24,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('retos', RetoController::class)->names('retos');
+
+Route::resource('retocumplido', RetosCumplidosController::class)->names('retocumplido');
 
 

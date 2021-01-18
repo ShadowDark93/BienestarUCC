@@ -17,8 +17,6 @@ class CreateCaraterizacionEstudiantesTable extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->string('cooreo');
-            $table->string('redSocial');
             $table->string('nombreAcudiente');
             $table->string('telefonoAcudiente', '10');
             $table->string('correoAcudiente');
@@ -28,6 +26,10 @@ class CreateCaraterizacionEstudiantesTable extends Migration
             $table->string('madreNombre');
             $table->string('madreTelefono');
             $table->string('madreCorreo');
+            $table->char('estrato','1');
+            $table->boolean('pc');
+            $table->boolean('internet');
+            $table->boolean('habeas_data')
             $table->timestamps();
         });
     }

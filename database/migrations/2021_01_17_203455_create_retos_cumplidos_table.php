@@ -18,6 +18,7 @@ class CreateRetosCumplidosTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('reto_id')->constrained('retos');
+            $table->text('reto');
             $table->timestamps();
             $table->boolean('cumplido')->default(false);
         });
