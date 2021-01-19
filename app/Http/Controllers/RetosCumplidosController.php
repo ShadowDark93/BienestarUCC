@@ -33,6 +33,8 @@ class RetosCumplidosController extends Controller
     {
         $reto = Reto::find($id);
 
+        return view('retocumplido.create', compact('reto'));
+
     }
 
     /**

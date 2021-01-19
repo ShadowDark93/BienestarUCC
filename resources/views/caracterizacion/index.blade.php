@@ -20,15 +20,15 @@
                 <h3 style="text-align: center" class="mb-3 mt-3">DATOS DEL ACUDIENTE</h3>
                 <div class="row">
 
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Nombres y Apellidos</label>
                         <input id="descripcion" name="descripcion" type="text" class="form-control" tabindex="1"></input>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Telefono </label>
                         <input id="descripcion" name="descripcion" type="number" class="form-control" tabindex="2"></input>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Correo </label>
                         <input id="descripcion" name="descripcion" type="email" class="form-control" tabindex="3"></input>
                     </div>
@@ -39,15 +39,15 @@
                 <h3 style="text-align: center" class="mb-3 mt-3">DATOS DEL PADRE</h3>
                 <div class="row">
 
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Nombres y Apellidos</label>
                         <input id="descripcion" name="descripcion" type="text" class="form-control" tabindex="4"></input>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Telefono </label>
                         <input id="descripcion" name="descripcion" type="number" class="form-control" tabindex="5"></input>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Correo </label>
                         <input id="descripcion" name="descripcion" type="email" class="form-control" tabindex="6"></input>
                     </div>
@@ -58,15 +58,15 @@
                 <h3 style="text-align: center" class="mb-3 mt-3">DATOS DE LA MADRE</h3>
                 <div class="row">
 
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Nombres y Apellidos </label>
                         <input id="descripcion" name="descripcion" type="text" class="form-control" tabindex="7"></input>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Telefono </label>
                         <input id="descripcion" name="descripcion" type="number" class="form-control" tabindex="8"></input>
                     </div>
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="acudiente">Correo </label>
                         <input id="descripcion" name="descripcion" type="email" class="form-control" tabindex="9"></input>
                     </div>
@@ -76,7 +76,7 @@
             <div class="form-group">
                 <h3 style="text-align: center" class="mb-3 mt-3">DATOS ADICIONALES</h3>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="">Seleccione su estrato Socio-Económico</label>
                         <select name="select" class="form-control">
                             <option value="1">Estrato 1</option>
@@ -85,7 +85,7 @@
                         </select>
                     </div>
 
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="">Posee Computador (Portatil o Mesa)?</label>
                         <select name="select" class="form-control">
                             <option value="1" selected>Si</option>
@@ -93,7 +93,7 @@
                         </select>
                     </div>
 
-                    <div class="col-4">
+                    <div class="col-sm-4">
                         <label for="">Posee conexión a internet?</label>
                         <select name="select" class="form-control">
                             <option value="1" selected>Si</option>

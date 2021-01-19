@@ -8,7 +8,7 @@
             {{ $reto[0]->id }} **
         </h1>
 
-        <form action="/retocumplido/store" method="post">
+        <form action="" method="post">
             @csrf
             <div class="form-group">
                 <h2 align="center" style="text-transform: uppercase;" for="">{{ $reto[0]->nombre }}</h2>
