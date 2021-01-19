@@ -26,8 +26,17 @@
 </head>
 
 <body>
+
+    <style>
+        input[type="number"] {
+            -webkit-appearance: textfield !important;
+            margin: 0;
+            -moz-appearance: textfield !important;
+        }
+    </style>
+
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
             <div class="container-fluid">
                 <img src="{{ asset('img/ico.png') }}" height="54px" width="54px" alt="">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -67,6 +76,8 @@
                             <a href="{{ route('tpersona.index') }}"
                                 class="nav-link btn btn-outline-info my-2 my-sm-0 m-1">Tipo Persona</a>
                             --}}
+                            <a href="{{ route('caracterizacion.index') }}"
+                                class="nav-link btn btn-outline-info my-2 my-sm-0 m-1">Perfil</a>
                             <a href="{{ route('retos.index') }}"
                                 class="nav-link btn btn-outline-info my-2 my-sm-0 m-1">Retos</a>
 
@@ -77,8 +88,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                     document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                             document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 

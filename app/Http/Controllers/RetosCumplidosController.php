@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reto;
 use App\Models\RetosCumplidos;
 use Illuminate\Http\Request;
 
 class RetosCumplidosController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,9 +29,10 @@ class RetosCumplidosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Reto $reto)
+    public function create(Reto $reto, Request $id)
     {
-        return view('retocumplido.create', compact('reto'));
+        $reto = Reto::find($id);
+
     }
 
     /**
@@ -35,7 +43,21 @@ class RetosCumplidosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'reto_id' => 'required',
+            'reto' => 'required',
+        ]);
+
+        $rc = new RetosCumplidos();
+        $rc->user_id = Auth()->User()->id;
+        $rc->reto_id = $request->get('reto_id');
+        $rc->reto = $request->get('reto');
+        $rc->cumplido = '1';
+
+        $rc->save();
+
+        return view('retocumplido.create', compact('reto'));
+
     }
 
     /**

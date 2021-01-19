@@ -20,7 +20,7 @@
                     <th scope="row">{{ $r->id }}</th>
                     <td>{{ $r->nombre }}</td>
                     <td class="from-group">
-                        <a href="{{ route('retocumplido.create', $r) }}" class="btn btn-primary">Cumplir</a>
+                        <a href="{{ route('retocumplido.create',['id'=>$r->id]) }}" class="btn btn-primary">Cumplir</a>
                     </td>
                 </tr>
                 @endforeach

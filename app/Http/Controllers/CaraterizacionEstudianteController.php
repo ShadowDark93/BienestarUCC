@@ -14,7 +14,7 @@ class CaraterizacionEstudianteController extends Controller
      */
     public function index()
     {
-        //
+        return view('caracterizacion.index');
     }
 
     /**

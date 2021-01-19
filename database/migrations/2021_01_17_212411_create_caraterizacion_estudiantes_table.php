@@ -21,15 +21,15 @@ class CreateCaraterizacionEstudiantesTable extends Migration
             $table->string('telefonoAcudiente', '10');
             $table->string('correoAcudiente');
             $table->string('padreNombre');
-            $table->string('padreTelefono');
+            $table->string('padreTelefono','10');
             $table->string('padreCorreo');
             $table->string('madreNombre');
-            $table->string('madreTelefono');
+            $table->string('madreTelefono','10');
             $table->string('madreCorreo');
             $table->char('estrato','1');
             $table->boolean('pc');
             $table->boolean('internet');
-            $table->boolean('habeas_data')
+            $table->boolean('habeas_data');
             $table->timestamps();
         });
     }

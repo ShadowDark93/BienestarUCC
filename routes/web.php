@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CaraterizacionEstudianteController;
 use App\Http\Controllers\RetoController;
 use App\Http\Controllers\RetosCumplidosController;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* URL::forceScheme('https'); */
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,5 +30,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('retos', RetoController::class)->names('retos');
 
 Route::resource('retocumplido', RetosCumplidosController::class)->names('retocumplido');
+
+Route::resource('caracterizacion', CaraterizacionEstudianteController::class)->names('caracterizacion');
 
 
